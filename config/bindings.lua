@@ -10,7 +10,7 @@ if platform.is_mac then
    mod.SUPER_REV = 'SUPER|CTRL'
 elseif platform.is_win or platform.is_linux then
    mod.SUPER = 'ALT' -- to not conflict with Windows key shortcuts
-   mod.SUPER_REV = 'ALT|CTRL'
+   mod.SUPER_REV = 'ALT|CTRL' -- this may be worth changing even on Linux; my biggest issue is that tools like htop expect to be able to read the F keys without modifiers.
 end
 
 -- stylua: ignore
