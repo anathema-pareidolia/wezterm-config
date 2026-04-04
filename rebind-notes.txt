@@ -1,0 +1,165 @@
+Rationale:
+I want to be able to interact with htop and nvtop in my terminal. Both of those expect unmodified F-keys; the wezterm config I shamelessly stole intercepts those.
+
+KDE bindings:
+what SUPER shortcuts do I need to avoid clashing with?
+what F-key shortcuts do I need to avoid clashing with?
+
+Fish bindings:
+yank	
+ctrl-y
+yank-pop	
+alt-y
+forward-char	
+right
+ctrl-f
+backward-char	
+left
+ctrl-b
+'if fish_in_macos_terminal; commandline -f forward-token; else commandline -f forward-word; end'	
+ctrl-right
+'if fish_in_macos_terminal; commandline -f backward-token; else commandline -f backward-word; end'	
+ctrl-left
+beginning-of-history	
+pageup
+end-of-history	
+pagedown
+fish_clipboard_copy	
+ctrl-x
+fish_clipboard_paste	
+ctrl-v
+\e\uF50Eep
+cancel	
+escape
+ctrl-\[
+ctrl-g
+complete	
+tab
+ctrl-i
+pager-toggle-search	
+ctrl-s
+complete-and-search	
+shift-tab
+history-delete or backward-delete-char	
+shift-delete
+down-or-search	
+down
+ctrl-n
+up-or-search	
+up
+ctrl-p
+forward-bigword	
+shift-right
+backward-bigword	
+shift-left
+prevd-or-backward-word	
+alt-b
+nextd-or-forward-word	
+alt-f
+'if fish_in_macos_terminal; commandline -f nextd-or-forward-word; else nextd-or-forward-token; end'	
+alt-right
+\e\[1\;9C
+'if fish_in_macos_terminal; commandline -f prevd-or-backward-word; else prevd-or-backward-token; end'	
+alt-left
+\e\[1\;9D
+history-token-search-backward	
+alt-up
+\e\[1\;9A
+alt-.
+history-token-search-forward	
+alt-down
+\e\[1\;9B
+__fish_list_current_token	
+alt-l
+__fish_preview_current_file	
+alt-o
+__fish_whatis_current_token	
+alt-w
+'status test-terminal-feature scroll-content-up && commandline -f scrollback-push' clear-screen	
+ctrl-l
+clear-commandline	
+ctrl-c
+backward-kill-line	
+ctrl-u
+kill-line	
+ctrl-k
+backward-kill-path-component	
+ctrl-w
+end-of-line	
+end
+ctrl-e
+beginning-of-line	
+home
+ctrl-a
+'if test "$(commandline; printf .)" = \\n.; __fish_echo dirh; else; commandline -f kill-word; end'	
+alt-d
+delete-or-exit	
+ctrl-d
+'for cmd in sudo doas please run0; if command -q $cmd; fish_commandline_prepend $cmd; break; end; end'	
+alt-s
+__fish_man_page	
+f1
+alt-h
+__fish_paginate	
+alt-p
+__fish_toggle_comment_commandline	
+alt-#
+edit_command_buffer	
+alt-e
+alt-v
+self-insert expand-abbr	
+space
+\;
+\|
+\&
+\>
+\<
+\)
+'commandline -i \\n (commandline --search-field >/dev/null && echo --search-field)' expand-abbr	
+shift-enter
+alt-enter
+'test -n "$(commandline)" && commandline -i " " (commandline --search-field >/dev/null && echo --search-field)'	
+ctrl-space
+'commandline -i " " (commandline --search-field >/dev/null && echo --search-field)' expand-abbr	
+shift-space
+execute	
+enter
+ctrl-j
+ctrl-m
+ctrl-enter
+delete-char	
+delete
+backward-delete-char	
+backspace
+shift-backspace
+ctrl-h
+transpose-chars	
+ctrl-t
+undo	
+ctrl-/
+ctrl-_
+ctrl-z
+redo	
+ctrl-shift-z
+alt-/
+transpose-words	
+alt-t
+upcase-word	
+alt-u
+capitalize-word	
+alt-c
+'if fish_in_macos_terminal; commandline -f backward-kill-word; else commandline -f backward-kill-token; end'	
+alt-backspace
+ctrl-alt-h
+'if fish_in_macos_terminal; commandline -f backward-kill-token; else commandline -f backward-kill-word; end'	
+ctrl-backspace
+'if fish_in_macos_terminal; commandline -f kill-word; else commandline -f kill-token; end'	
+alt-delete
+'if fish_in_macos_terminal; commandline -f kill-token; else commandline -f kill-word; end'	
+ctrl-delete
+beginning-of-buffer	
+alt-\<
+end-of-buffer	
+alt-\>
+history-pager	
+ctrl-r
